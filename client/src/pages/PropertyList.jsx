@@ -16,7 +16,7 @@ const PropertyList = () => {
     <main className='bg-white font-outfit'>
        <div className=" wrapper md:-mt-0 -mt-40">
       
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:my-25">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:my-25 p-4 md:p-0">
         {properties.map((property) => (
           
           <div

@@ -19,14 +19,14 @@ const Navbar = () => {
 
   return (
     <>
-    <main className='  bg-cover bg-center  bg-no-repeat relative  h-[500px]  md:h-[600px] lg:h-[600px]'>
+    <main className='  bg-cover bg-center  bg-no-repeat relative  h-[500px]  md:h-[600px] lg:h-[600px] overflow-hidden'>
     <div className=''>
         <img src={imagepage} alt="" />
     </div>
         <nav className="wrapper absolute text-white py-4 px-8 bottom-120 flex items-center justify-between  inset-0 my-8 ">
       {/* Logo */}
       <div className="flex items-center gap-2">
-        <div className="bg-[#3D9970] w-10 h-10 rounded-full flex items-center justify-center font-bold text-[#0D1B39]">
+        <div className="bg-[#3D9970] w-10 h-10 rounded-full flex items-center justify-center font-bold text-white">
           BH
         </div>
         <span className=" text-xl font-poppins font-[500]">BetaHouse</span>
@@ -42,7 +42,7 @@ const Navbar = () => {
       </ul>
 
       {/* Auth Buttons */}
-      <div className="flex items-center gap-4">
+      <div className="md:flex items-center gap-4 hidden ">
         
         <Link
           to="/SignIn" className='px-5 py-2 border cursor-pointer border-white rounded-md hover:bg-white hover:text-[#0D1B39] transition'>
@@ -55,6 +55,7 @@ const Navbar = () => {
         </Link>
         
       </div>
+      
       <div className="absolute top-30 text-white text-center left-42 my-10 font-outfit hidden md:block">
       <h1 className="text-4xl md:text-5xl tracking-wide font-[700] mb-4 mx-57">
         Browse Our Properties
@@ -133,6 +134,33 @@ const Navbar = () => {
    
   
     </nav> 
+    <nav className="absolute">
+    <div>
+      <ul className="hidden md:flex items-center gap-8 font-exo text-[#F5F5F5] cursor-pointer">
+        <li className="hover:text-[#3D9970]">Home</li>
+        <li className="hover:text-[#3D9970]">Properties</li>
+        <li className="hover:text-[#3D9970]">About Us</li>
+        <li className="hover:text-[#3D9970]">Blog</li>
+        <li className="hover:text-[#3D9970]">Contact Us</li>
+      </ul>
+    </div>
+    <div>
+      <div className=" md:hidden  gap-4">
+        
+        <Link
+          to="/SignIn" className='px-5 py-2 border cursor-pointer border-white rounded-md hover:bg-white hover:text-[#0D1B39] transition'>
+        Signin 
+        </Link>
+        
+        
+        <Link to="/SignUp"className='px-5 py-2 bg-[#3D9970] text-[#0D1B39] rounded-md hover:bg-[#38b2ac] transition'>
+         Login
+        </Link>
+        
+      </div>
+    </div>
+
+    </nav>
      <section>
       
       <div className="dropdown md:hidden mx-3 my-3">
@@ -142,7 +170,7 @@ const Navbar = () => {
     <li><a>Property type</a></li>
   </ul>
 </div>
-    <div className="wrapper my-15  md:my-5 flex gap-4 justify-between">
+    <div className="wrapper my-15  md:my-5 md:block hidden gap-4 justify-between">
       <div className="flex gap-6">
       <img className="w-5 h-5" src={filterimage} alt="Filter-visual" />
       <h3>
