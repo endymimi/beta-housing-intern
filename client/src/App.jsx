@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DesignLayouts from "./components/DesignLayouts.jsx";
-import HomePage from "./pages/Homepage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import SignIn from "./authbtn/SignIn.jsx";
 import SignUp from "./authbtn/SignUp.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
