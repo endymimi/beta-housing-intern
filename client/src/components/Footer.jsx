@@ -14,7 +14,7 @@ const Footer = () => {
     <>
     <main className='bg-[#035A33]  w-[1440px]  md:h-[500px] lg:h-[500px] md:mt-20 mt-10 '>
     <div>
-     <footer className="footer sm:footer-horizontal wrapper    text-white   ">
+     <footer className="footer sm:footer-horizontal container text-white   ">
   <nav className='px-5 pr-8'>
     <div className='flex items-center gap-2 mr-5 '>
       <div className="footer-title  bg-[#3D9970] my-8 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white">
@@ -27,13 +27,13 @@ const Footer = () => {
     <p className='hidden md:block'>with BetaHouse. Take control of your Rental journey today!</p>
     <p className='md:hidden '>with BetaHouse. Take control of your Rental journey</p>
     <p className='md:hidden'>today!</p>
-    <div className='flex items-center text-[#FFFFFF] text-[14.79px] my-1'>
+    <div className='flex items-center text-white text-[14.79px] my-1'>
                <MdLocationOn className="mr-3 my-3" /> 95,Tinubu Estate,Lekki,Lagos.
                </div>
-               <div className='flex items-center text-[#FFFFFF] text-[14.79px] my-1'>
+               <div className='flex items-center text-white text-[14.79px] my-1'>
                <img className='mr-3' src={vectortel} alt="" /> +234 675 8935 675
                </div>
-               <div className='flex items-center text-[#FFFFFF] text-[14.79px] my-1'>
+               <div className='flex items-center text-white text-[14.79px] my-1'>
                 <img className='mr-3 my-3 ' src={vectormail} alt="" /> 95,Tinubu Estate,Lekki,Lagos.
                </div>
     
@@ -66,7 +66,7 @@ const Footer = () => {
 </footer>
     </div>
     <div className='border-b border-white my-15'></div>
-    <div className='text-white wrapper md:flex justify-between '>
+    <div className='text-white container md:flex justify-between '>
       <p className='md:ml-6 hidden md:block'>Copyright 2023 BetaHouse | Designed by Michael.fig</p>
       <p className='md:-mr-130 hidden md:block'>Privacy Policy</p>
 

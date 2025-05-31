@@ -70,7 +70,7 @@ export const properties = [
   },
  
    {
-    id: 7,
+    _id: 7,
     title: "Infinite Bliss Villa",
     location: "Ishagu, Enugu",
     bedrooms: 5,
@@ -81,7 +81,7 @@ export const properties = [
     for: "Sale",
   },
   {
-    id: 8,
+    _id: 8,
     title: "Real House Luxury Villa",
     location: "Work Layout, Owerri",
     bedrooms: 8,
@@ -92,7 +92,7 @@ export const properties = [
     for: "Rent",
   },
   {
-    id: 9,
+    _id: 9,
     title: "Real House Luxury Villa",
     location: "Ikeja, Lagos",
     bedrooms: 6,
@@ -160,3 +160,21 @@ export const popularproperties = [
 
 
 ]
+
+  export const sortOptions = [
+    "Default",
+    "Most Recent",
+    "Highest Price",
+    "Lowest Price",
+    "Verified Status",
+  ];
+
+
+  
+  export const propertyFilters = [
+    "Land",
+    "Commercial Properties",
+    "Event Centers",
+    "Houses",
+    "Flat",
+  ];

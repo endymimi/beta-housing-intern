@@ -60,10 +60,10 @@ const SignUp = () => {
                      <button
                            type="button"
                            className="absolute left-147 top-72 cursor-pointer"
-                           onClick={() => setShowPassword(!showPassword)} // Toggle state
+                           onClick={() => setShowPassword(!showPassword)} 
                          >
                            <img
-                             src={showPassword ? visibleoff : visible} // Change icon
+                             src={showPassword ? visibleoff : visible} 
                              alt="Toggle Visibility"
                              className="w-6 h-6 transition-opacity duration-200"
                            />
@@ -83,10 +83,10 @@ const SignUp = () => {
                      <button
                            type="button"
                            className="absolute left-147 top-84 cursor-pointer"
-                           onClick={() => setShowPassword2(!showPassword2)} // Toggle state
+                           onClick={() => setShowPassword2(!showPassword2)} 
                          >
                            <img
-                             src={showPassword2 ? visibleoff : visible} // Change icon
+                             src={showPassword2 ? visibleoff : visible} 
                              alt="Toggle Visibility"
                              className="w-6 h-6 transition-opacity duration-200"
                            />

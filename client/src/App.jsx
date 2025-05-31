@@ -1,36 +1,25 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './layouts/Navbar';
-import PropertyList from './pages/PropertyList';
-import PopularProp from './pages/PopularProp';
-import Footer from './layouts/Footer';
-import SignIn from './authbtn/SignIn';
-import SignUp from './authbtn/SignUp';
-import './App.css';
+import DesignLayouts from "./components/DesignLayouts.jsx";
+import HomePage from "./pages/Homepage.jsx";
+import SignIn from "./authbtn/SignIn.jsx";
+import SignUp from "./authbtn/SignUp.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+
+import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-
-        {/* Home route with Navbar, Footer, and main components */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <PropertyList />
-              <PopularProp />
-              <Footer />
-            </>
-          }
-        />
-
-        {/* Sign In and Sign Up routes without Navbar or Footer */}
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
-
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider> 
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DesignLayouts />}>
+            <Route path="/" element={<HomePage />} />
+          </Route>
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import arrowleft from "../assets/arrowleft.png";
 import arrowright from "../assets/arrowright.png";
@@ -13,7 +14,7 @@ const PopularProp = () => {
   return (
     <>
     <main className='py-16 bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-3 lg:px-8'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-3 lg:px-8 container'>
         <h1 className='text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800 font-outfit '>
           Discover Our Popular Properties
         </h1>
@@ -22,7 +23,7 @@ const PopularProp = () => {
 
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 wrapper sm:gap-8 justify-items-center overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 container sm:gap-8 justify-items-center overflow-hidden">
   <div className=" relative">
     <img
       src="https://res.cloudinary.com/ds0a0s3k3/image/upload/v1748388760/houseimage10_gy4koe.png"

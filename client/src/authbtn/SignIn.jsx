@@ -30,7 +30,7 @@ const SignIn = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="flex w-full max-w-6xl bg-white rounded-lg overflow-hidden shadow-lg">
 
-        {/* Left Section - Form */}
+        
         <div className="w-full md:w-1/2 p-10 space-y-4">
           <h2 className="text-2xl font-bold mb-2">Welcome Back to BetaHouse!</h2>
           <p className="mb-6 text-gray-600">Let’s get started by filling out the information below</p>
@@ -53,10 +53,10 @@ const SignIn = () => {
             <button
                   type="button"
                   className="absolute left-150 top-63 cursor-pointer"
-                  onClick={() => setShowPassword(!showPassword)} // Toggle state
+                  onClick={() => setShowPassword(!showPassword)} 
                 >
                   <img
-                    src={showPassword ? visibleoff : visible} // Change icon
+                    src={showPassword ? visibleoff : visible} 
                     alt="Toggle Visibility"
                     className="w-6 h-6 transition-opacity duration-200"
                   />
@@ -90,7 +90,6 @@ const SignIn = () => {
           </p>
         </div>
 
-        {/* Right Section - Image */}
         <div className="hidden md:block md:w-1/2">
           <img
             src={signinbg}
