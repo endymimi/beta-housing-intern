@@ -6,6 +6,7 @@ import { signInSchema } from '../utils/ValidationSchema';
 import signinbg from "../assets/signinimg2.png";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
+import { useAuth } from "../context/AuthContext"; 
 
 import visible from "../assets/visibility_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
 import visibleoff from "../assets/visibility_off_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
@@ -89,14 +90,21 @@ const SignIn = () => {
             New User? <Link to="/SignUp" className="text-green-600 cursor-pointer">Sign Up</Link>
           </p>
         </div>
-
-        <div className="hidden md:block md:w-1/2">
+        <section>
+        <div className="hidden md:block ">
           <img
             src={signinbg}
             alt="Building"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover relative"
           />
         </div>
+        <section className=' flex items-center gap-2 absolute top-16 right-132'>
+          <div className='text-[#FEFEFF] font-poppins  font-[700] p-2 bg-[#3D9970] rounded-full '>
+            <h1>BH</h1>
+            </div>
+          <h2 className='font-[500] text-[#FFFFFF] text-2xl font-poppins'>BetaHouse</h2>
+        </section>
+        </section>
       </div>
     </div>
     </>

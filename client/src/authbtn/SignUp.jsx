@@ -116,14 +116,22 @@ const SignUp = () => {
           </p>
         </div>
 
-        {/* Right Section - Image */}
-        <div className="hidden md:block md:w-1/2">
+        <section>
+        <div className="hidden md:block ">
           <img
             src={signinbg}
             alt="Building"
             className="w-full h-full object-cover"
           />
         </div>
+
+        <section className=' flex items-center gap-2 absolute top-16 right-132'>
+          <div className='text-[#FEFEFF] font-poppins  font-[700] p-2 bg-[#3D9970] rounded-full '>
+            <h1>BH</h1>
+            </div>
+          <h2 className='font-[500] text-[#FFFFFF] text-2xl font-poppins'>BetaHouse</h2>
+        </section>
+        </section>
       </div>
     </div>
     

@@ -6,6 +6,9 @@
 
 @import "tailwindcss";
 
+@import 'animate.css';
+
+
 @plugin "daisyui";
 
 

@@ -20,7 +20,7 @@ const HeroPage = () => {
   return (
     <section className="container py-9 px-3">
       <div className="text-center overflow-x-hidden mb-10">
-        <h1 className="font-outfit text-3xl md:text-5xl lg:text-[68px] leading-tight font-bold ">
+        <h1 className="font-outfit text-3xl animate__animated animate__backInDown md:text-5xl lg:text-[68px] leading-tight font-bold ">
           Browse Our Properties
         </h1>
         <p className=" md:text-xl lg:text-[26px] leading-loose mt-4 text-xl text-[#FFFFFF]">
