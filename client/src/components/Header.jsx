@@ -31,7 +31,7 @@ const Header = () => {
   
   return (
     <>
-      <main style={{ backgroundImage: `url(${bgimage})` }} className=" text-white bg-cover bg-center min-h-screen ">
+      <main style={{ backgroundImage: `url(${bgimage})` }} className="overflow-x-hidden text-white bg-cover bg-center min-h-screen ">
         <nav className="container flex justify-between">
          
           <Link to="/"><main><NavLogo /></main></Link>
@@ -47,7 +47,7 @@ const Header = () => {
           </section>
 
           
-          <section className="md:flex lg:gap-[34px] gap-[20px] hidden relative">
+          <section className="md:flex lg:gap-[34px] gap-[20px] hidden relative overflow-x-hidden">
             {user ? (
               <div className="relative flex items-center">
                 <div
@@ -60,7 +60,7 @@ const Header = () => {
                 </div>
 
                 {showDropdownArrow && (
-                  <div className="absolute right-0 mt-2 bg-white border border-gray-200 rounded shadow-md z-50 w-[150px]">
+                  <div className="absolute right-0 mt-2 overflow-x-hidden bg-white border border-gray-200 rounded shadow-md z-50 w-[150px]">
                     <button
                       onClick={handleLogout}
                       className="w-full text-left px-4 text-red-500 py-2 text-sm hover:bg-gray-100"
@@ -71,7 +71,7 @@ const Header = () => {
                 )}
               </div>
             ) : (
-              <div className="md:flex lg:gap-[34px] gap-[20px] hidden">
+              <div className="md:flex lg:gap-[34px] gap-[20px] hidden overflow-x-hidden">
                 <Link to="/signup">
                   <div className="border-white border-[2px] rounded-[8px] px-6 py-3 hover:bg-[#3D9970] hover:text-white text-center text-sm font-[400]">
                     Sign In
@@ -93,7 +93,7 @@ const Header = () => {
       <img
         src={isOpen ? closemenu : hamburger}
         alt="Menu Toggle"
-     className="w-6 h-6"/>
+     className="w-6 h-6 overflow-x-hidden"/>
 </button>
 
           
@@ -101,7 +101,7 @@ const Header = () => {
 
         
         {isOpen && (
-          <div className="md:hidden px-4 pb-4 text-[#C7C7C7] font-exo text-[16px]">
+          <div className="md:hidden px-4 pb-4 text-[#C7C7C7] font-exo text-[16px] overflow-x-hidden">
             <ul className="flex flex-col gap-4 items-center">
               <Link to="/"><li onClick={() => setIsOpen(false)}>Home</li></Link>
               <Link to="/properties"><li onClick={() => setIsOpen(false)}>Properties</li></Link>
@@ -112,7 +112,7 @@ const Header = () => {
               {user ? (
                 <li
                   onClick={handleLogout}
-                  className="text-red-500 hover:text-red-600 cursor-pointer"
+                  className="text-cyan-300 hover:text-purple-300 cursor-pointer"
                 >
                   Logout
                 </li>

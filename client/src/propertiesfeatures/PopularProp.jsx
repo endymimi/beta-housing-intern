@@ -23,9 +23,9 @@ const PopularProp = () => {
 
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 container sm:gap-8 justify-items-center overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto px-4 overflow-hidden">
   <div className=" relative">
-    <img
+    <img className='w-full h-auto object-cover'
       src="https://res.cloudinary.com/ds0a0s3k3/image/upload/v1748388760/houseimage10_gy4koe.png"
       alt="House-Image" />
       <div className='absolute text-white top-68 left-5 font-outfit shadow-md tracking-widest'>
@@ -35,14 +35,14 @@ const PopularProp = () => {
         <div className='flex items-center text-[#FFFFFF] text-[14.79px] my-1'>
            <MdLocationOn className="mr-1" /> Victoria island,Lagos.
            <div>
-          <img className='absolute -ml-60 bottom-40 ' src={arrowleft} alt="arrow-icon" />
+          <img className='absolute left-2 top-1/2 transform -translate-y-1/2 w-6 h-6' src={arrowleft}  alt="arrow-icon" />
         </div>
         </div>
         
       </div>
   </div>
   <div className="relative">
-    <img
+    <img className='w-full h-auto object-cover'
       src="https://res.cloudinary.com/ds0a0s3k3/image/upload/v1748388760/houseimage11_bnuu5s.png"
       alt="House-Image" />
       <div className='absolute text-white top-68 left-5 font-outfit shadow-md tracking-widest'>
@@ -55,7 +55,7 @@ const PopularProp = () => {
       </div>
   </div>
   <div className=" relative">
-    <img
+    <img className='w-full h-auto object-cover'
       src="https://res.cloudinary.com/ds0a0s3k3/image/upload/v1748388759/houseimage12_pvtnmy.png"
       alt="House-Image" />
       <div className='absolute text-white top-68 left-5 font-outfit shadow-md tracking-widest'>
@@ -68,7 +68,7 @@ const PopularProp = () => {
       </div>
   </div>
   <div className=" relative">
-    <img
+    <img className='w-full h-auto object-cover'
       src="https://res.cloudinary.com/ds0a0s3k3/image/upload/v1748388759/houseimge13_npzur6.png"
       alt="House-Image" />
        <div className='absolute text-white top-68 left-5 font-outfit shadow-md tracking-widest'>
@@ -79,7 +79,7 @@ const PopularProp = () => {
            <MdLocationOn className="mr-1" /> Victoria island,Lagos.
         </div>
         <div>
-        <img className='absolute bottom-38 ml-60' src={arrowright} alt="arrow-icon" />
+        <img className='absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6' src={arrowright} alt="arrow-icon" />
       </div>
       </div>
       

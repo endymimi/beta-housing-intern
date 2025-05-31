@@ -43,7 +43,7 @@ const PropLists = () => {
 
   return (
     <>
-      <main className="container ">
+      <main className="max-w-7xl mx-auto px-4 py-6 overflow-x-hidden">
         <section>
           <div className="relative w-full  border-gray-200 bg-white px-4 py-3 md:p-0 p-5">
             
@@ -74,7 +74,7 @@ const PropLists = () => {
                 </button>
 
                 {isSortDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 shadow-lg rounded-md z-10">
+                  <div className="absolute right-0 mt-2 min-w-[10rem] max-w-xs  bg-white border border-gray-300 shadow-lg rounded-md z-10">
                     {sortOptions.map((option) => (
                       <div
                         key={option}
@@ -126,7 +126,7 @@ const PropLists = () => {
         
         <section>
           <div >
-            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[54px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {properties.map((property) => (
                 <div
                   key={property.id}
@@ -163,11 +163,11 @@ const PropLists = () => {
                     <h3 className="text-[#444444] text-[20.68px] leading-[24.81px] tracking-wide ">{property.title}</h3>
                     <div className="flex items-center">
                       <img
-                        className="p-2 text-[#666666]"
+                        className="p-2 w-5 h-5 mr-1 text-[#666666]"
                         src={location}
                         alt="location-icon"
                       />
-                      <figcaption className="text-[#373737] ">{property.location}</figcaption>
+                      <figcaption className=" text-[#373737] ">{property.location}</figcaption>
                     </div>
                     <div className="flex items-center text-sm text-gray-700 gap-4 my-2">
                       <span className="flex items-center gap-1">

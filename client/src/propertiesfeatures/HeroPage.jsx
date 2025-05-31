@@ -19,7 +19,7 @@ const HeroPage = () => {
   
   return (
     <section className="container py-9 px-3">
-      <div className="text-center mb-10">
+      <div className="text-center overflow-x-hidden mb-10">
         <h1 className="font-outfit text-3xl md:text-5xl lg:text-[68px] leading-tight font-bold ">
           Browse Our Properties
         </h1>
@@ -29,9 +29,9 @@ const HeroPage = () => {
         <p className=" md:text-xl lg:text-[26px] text-xl leading-loose mt-4 text-[#FFFFFF]"> Start browsing now!</p>
       </div>
  
-        <main className="p-5">
+        <main className= "p-3 sm:p-5 overflow-x-hidden">
 
-        <div className="flex flex-wrap md:flex-nowrap bg-white my-15 rounded-lg  overflow-hidden max-w-6xl mx-auto">
+        <div className="flex flex-wrap md:flex-nowrap bg-white my-10 rounded-lg overflow-hidden w-full max-w-full md:max-w-6xl mx-auto">
         
         <div className="md:flex hidden flex-col justify-center p-4 border-b md:border-b-0 md:border-r w-full md:w-1/3">
           <label className="text-xs font-semibold uppercase text-gray-500 mb-1">location</label>
@@ -43,15 +43,15 @@ const HeroPage = () => {
         </div>
 
         <div className="flex flex-col justify-center p-4 border-b md:border-b-0 md:border-r w-full md:w-1/3">
-          <label className="text-xs font-semibold uppercase text-gray-500 mb-1">property type</label>
+          <label className="text-xs font-semibold uppercase text-gray-800 mb-1">property type</label>
           <input
             type="text"
             placeholder="eg. Duplex, Bedroom Flat"
-            className="outline-none text-sm text-gray-700 placeholder-gray-400 w-full"
+            className="outline-none text-sm text-gray-800 placeholder-gray-500 w-full"
             />
         </div>
-        <div className="flex flex-col justify-center p-4 border-b md:border-b-0 md:border-r w-full md:w-1/3">
-          <label className="text-xs font-semibold text-gray-500 uppercase mb-1">Bedroom</label>
+        <div className="flex flex-col justify-center overflow-x-hidden p-4 border-b md:border-b-0 md:border-r w-full md:w-1/3">
+          <label className="text-xs font-semibold text-gray-800 uppercase mb-1">Bedroom</label>
           <div className="flex items-center space-x-4 mt-1">
             <button
               onClick={decreaseBeds}
@@ -69,7 +69,7 @@ const HeroPage = () => {
           </div>
         </div>
         
-          <button className="bg-[#3D9970] text-white font-[400] px-8 py-2 text-sm rounded-md hover:bg-green-700 transition w-full md:w-auto ">
+          <button className="bg-[#3D9970] text-white font-[400] px-4 sm:px-8 py-2 text-sm rounded-md hover:bg-green-700 transition w-full md:w-auto ">
             Find Property
           </button>
         
