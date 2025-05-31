@@ -36,7 +36,7 @@ const Header = () => {
          
           <Link to="/"><main><NavLogo /></main></Link>
 
-          <section className="hidden md:block">
+          <section className="hidden md:block overflow-x-hidden">
             <ul className=" lg:text-[18px] leading-loose tracking-wide flex lg:gap-[33.05px] font-exo font-[500] gap-[15px]">
               <li>Home</li>
               <li>Properties</li>

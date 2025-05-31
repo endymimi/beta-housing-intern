@@ -43,7 +43,7 @@ const PropLists = () => {
 
   return (
     <>
-      <main className="max-w-7xl mx-auto px-4 py-6 overflow-x-hidden">
+      <main className=" mx-auto  container px-4 py-6 overflow-x-hidden">
         <section>
           <div className="relative w-full  border-gray-200 bg-white px-4 py-3 md:p-0 p-5">
             
@@ -52,7 +52,7 @@ const PropLists = () => {
               <div className="flex items-center gap-6">
                 <button
                   onClick={() => setIsFilterOpen(!isFilterOpen)}
-                  className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black"
+                  className="flex items-center gap-1 p-5 text-sm font-medium text-gray-700 hover:text-black"
                 >
                   <SlidersHorizontal className="w-4 h-4" />
                   More Filter
@@ -70,7 +70,7 @@ const PropLists = () => {
                   className="flex items-center gap-1 font-medium hover:text-black"
                 >
                   Sort by: <span className="text-black">{selectedSort}</span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4 p-5" />
                 </button>
 
                 {isSortDropdownOpen && (
@@ -91,13 +91,13 @@ const PropLists = () => {
 
             
             {isFilterOpen && (
-              <div className="mt-4 flex flex-col gap-3">
+              <div className="mt-4 flex flex-col gap-3 my-5 ">
                 {/* Filters */}
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 ">
                   {propertyFilters.map((filter) => (
                     <label
                       key={filter}
-                      className="flex items-center gap-2 text-sm text-gray-700"
+                      className="flex items-center gap-2 text-sm  text-gray-700"
                     >
                       <input
                         type="checkbox"
@@ -126,7 +126,7 @@ const PropLists = () => {
         
         <section>
           <div >
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5  gap-6 sm:gap-8">
               {properties.map((property) => (
                 <div
                   key={property.id}

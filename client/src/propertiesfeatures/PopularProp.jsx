@@ -13,8 +13,8 @@ const PopularProp = () => {
  
   return (
     <>
-    <main className='py-16 bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-3 lg:px-8 container'>
+    <main className='p-6 bg-white'>
+      <div className=''>
         <h1 className='text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800 font-outfit '>
           Discover Our Popular Properties
         </h1>
@@ -23,7 +23,7 @@ const PopularProp = () => {
 
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto px-4 overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 container  mx-auto px-8 overflow-hidden">
   <div className=" relative">
     <img className='w-full h-auto object-cover'
       src="https://res.cloudinary.com/ds0a0s3k3/image/upload/v1748388760/houseimage10_gy4koe.png"
