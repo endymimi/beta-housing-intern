@@ -12,7 +12,7 @@ const Footer = () => {
   
     return (
     <>
-    <main className='bg-[#035A33]  md:mt- mt-10 '>
+    <main className='bg-[#035A33]   '>
     <div>
      <footer className="footer sm:footer-horizontal container text-white   ">
   <nav className='px-5 pr-8'>

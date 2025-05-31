@@ -43,7 +43,7 @@ const HeroPage = () => {
         </div>
 
         <div className="flex flex-col justify-center p-4 border-b md:border-b-0 md:border-r w-full md:w-1/3">
-          <label className="text-xs font-semibold uppercase text-gray-800 mb-1">property type</label>
+          <label className="text-xs font-semibold uppercase md:text-gray-800 text-green-800 mb-1">property type</label>
           <input
             type="text"
             placeholder="eg. Duplex, Bedroom Flat"
@@ -51,7 +51,7 @@ const HeroPage = () => {
             />
         </div>
         <div className="flex flex-col justify-center overflow-x-hidden p-4 border-b md:border-b-0 md:border-r w-full md:w-1/3">
-          <label className="text-xs font-semibold text-gray-800 uppercase mb-1">Bedroom</label>
+          <label className="text-xs font-semibold md:text-gray-800 text-green-800 uppercase mb-1">Bedroom</label>
           <div className="flex items-center space-x-4 mt-1">
             <button
               onClick={decreaseBeds}
@@ -69,7 +69,7 @@ const HeroPage = () => {
           </div>
         </div>
         
-          <button className="bg-[#3D9970] text-white font-[400] px-4 sm:px-8 py-2 text-sm rounded-md hover:bg-green-700 transition w-full md:w-auto ">
+          <button className="bg-[#3D9970] text-white font-[400] px-4 sm:px-8 py-2 text-sm rounded-md hover:bg-orange-200 transition w-full md:w-auto ">
             Find Property
           </button>
         

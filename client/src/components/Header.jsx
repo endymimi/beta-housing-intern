@@ -127,7 +127,9 @@ const Header = () => {
         )}
 
         
-        <section><HeroPage /></section>
+        <section>
+        <HeroPage />
+      </section>
       </main>
     </>
   );

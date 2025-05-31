@@ -35,7 +35,7 @@ const PopularProp = () => {
         <div className='flex items-center text-[#FFFFFF] text-[14.79px] my-1'>
            <MdLocationOn className="mr-1" /> Victoria island,Lagos.
            <div>
-          <img className='absolute left-2 top-1/2 transform -translate-y-1/2 w-6 h-6' src={arrowleft}  alt="arrow-icon" />
+          <img className='absolute bottom-25 right-57 ' src={arrowleft}  alt="arrow-icon" />
         </div>
         </div>
         
@@ -79,7 +79,7 @@ const PopularProp = () => {
            <MdLocationOn className="mr-1" /> Victoria island,Lagos.
         </div>
         <div>
-        <img className='absolute right-10 top-1/2 transform -translate-y-1/2 w-6 h-6' src={arrowright} alt="arrow-icon" />
+        <img className='absolute bottom-20 md:left-49 left-64' src={arrowright} alt="arrow-icon" />
       </div>
       </div>
       
