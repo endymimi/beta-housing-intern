@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import NavLogo from '../utils/navLogo';
+import NavLogo from "../utils/NavLogo";
 import loginicon from "../assets/login.svg";
 import dropdown from "../assets/arrow_drop_down_36dp_000000_FILL0_wght400_GRAD0_opsz40.svg";
 import { useAuth } from "../context/AuthContext";
