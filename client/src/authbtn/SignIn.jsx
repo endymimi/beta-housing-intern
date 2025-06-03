@@ -7,13 +7,22 @@ import signinbg from "../assets/signinimg2.png";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext"; 
+import { useNavigate } from "react-router-dom"; 
+import { Toaster, toast } from 'react-hot-toast';
+
 
 import visible from "../assets/visibility_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
 import visibleoff from "../assets/visibility_off_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
 
 
+ const baseUrl = import.meta.env.VITE_API_URL;
+
 
 const SignIn = () => {
+   const navigate = useNavigate(); 
+     const { Signin } = useAuth(); 
+
+
   const {
     register,
     handleSubmit,
@@ -22,17 +31,49 @@ const SignIn = () => {
     resolver: yupResolver(signInSchema),
   });
   
-  const onSubmit = (data) => console.log(data);
+  // const onSubmit = (data) => console.log(data);
 
   const [showPassword, setShowPassword] = useState(false);
+
+
+const onSubmit = async (data) => {
+    try {
+      const res = await fetch(`${baseUrl}/api/auth/sign-in`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      console.log(result);
+      
+
+      if (!result.success) {
+        toast.error(result.errMsg || "signin failed");
+        reset();
+        return;
+      }
+
+      toast.success(result.message || "signin successful");
+      login(result.user.token, result.user); 
+      reset();
+      setTimeout(() => navigate("/"), 1500);
+    } catch (error) {
+      console.log(error.message);
+      console.error("signin error:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
+  };
+
   
     return (
       <>
+            <Toaster />
+
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="flex w-full max-w-6xl bg-white rounded-lg overflow-hidden shadow-lg">
 
         
-        <div className="w-full md:w-1/2 p-10 space-y-4">
+        <div onSubmit={handleSubmit(onSubmit)} className="w-full md:w-1/2 p-10 space-y-4">
           <h2 className="text-2xl font-bold mb-2">Welcome Back to BetaHouse!</h2>
           <p className="mb-6 text-gray-600">Let’s get started by filling out the information below</p>
 

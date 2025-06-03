@@ -1,18 +1,24 @@
 import React from 'react'
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom"; 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signUpSchema } from '../utils/ValidationSchema';
 import signinbg from "../assets/signinimage.png";
 import { Link } from 'react-router-dom';
+import { Toaster, toast } from 'react-hot-toast';
+
 
 import visible from "../assets/visibility_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
 import visibleoff from "../assets/visibility_off_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
 
 
+ const baseUrl = import.meta.env.VITE_API_URL;
+
 
 const SignUp = () => {
-  
+   const navigate = useNavigate(); 
+
   const {
       register,
       handleSubmit,
@@ -21,11 +27,48 @@ const SignUp = () => {
       resolver: yupResolver(signUpSchema),
     });
     
-    const onSubmit = (data) => console.log(data);
+    // const onSubmit = (data) => console.log(data);
   
     const [showPassword, setShowPassword] = useState(false);
 
     const [showPassword2, setShowPassword2] = useState(false);
+
+
+    const onSubmit = async (data) => {
+    try {
+      const response = await fetch(`${baseUrl}/api/auth/sign-up`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      console.log(result);
+      
+
+      if (!result.success) {
+        toast.error(result.errMsg || "Something went wrong!");
+        return;
+      }
+
+      toast.success(result.message || "Sign up successful!", { duration: 2500 });
+
+      reset();
+
+      // Redirect to login page after delay using useNavigate
+      setTimeout(() => {
+        navigate("/login"); 
+      }, 1500);
+
+    } catch (error) {
+      // console.error("Sign up error:", error);
+      // toast.error("Sign up failed!");
+      console.log(error.message);
+    }
+  };
+
   
   
   return (
@@ -34,7 +77,7 @@ const SignUp = () => {
       <div className="flex w-full max-w-6xl bg-white rounded-lg overflow-hidden shadow-lg">
 
         {/* Left Section - Form */}
-        <div className="w-full md:w-1/2 p-10">
+        <div  onSubmit={handleSubmit(onSubmit)}  className="w-full md:w-1/2 p-10">
           <h2 className="text-2xl font-bold mb-2">Join our community of home seekers and explore the possibilities that await.</h2>
           <p className="mb-6 text-gray-600">Let’s get started by filling out the information below</p>
 

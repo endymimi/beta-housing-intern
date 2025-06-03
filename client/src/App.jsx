@@ -5,10 +5,13 @@ import SignIn from "./authbtn/SignIn.jsx";
 import SignUp from "./authbtn/SignUp.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 
+
+
 import "./App.css";
 
 function App() {
   return (
+    
     <AuthProvider> 
       <BrowserRouter>
         <Routes>
@@ -20,6 +23,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AuthProvider>
+    
   );
 }
 
