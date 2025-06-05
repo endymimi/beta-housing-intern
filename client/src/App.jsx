@@ -18,7 +18,7 @@ function App() {
           <Route element={<DesignLayouts />}>
             <Route path="/" element={<HomePage />} />
           </Route>
-          <Route path="/login" element={<SignIn />} />
+          <Route path="/SignIn" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>

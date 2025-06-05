@@ -20,7 +20,7 @@ import visibleoff from "../assets/visibility_off_24dp_5F6368_FILL0_wght400_GRAD0
 
 const SignIn = () => {
    const navigate = useNavigate(); 
-     const { Signin } = useAuth(); 
+     const { login } = useAuth(); 
 
 
   const {
